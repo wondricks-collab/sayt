@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asosiy menyu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h2>Asosiy menyu</h2>
+    <form action="/add" method="post">
+      <input type="text" name="amount" placeholder="Masalan: 25$ yoki 50000" required>
+      <input type="text" name="note" placeholder="Izoh (ixtiyoriy)">
+      <button type="submit">➕ Chiqim qo‘shish</button>
+    </form>
+    <a href="/balance"><button>📊 Balans</button></a>
+    <a href="/journal"><button>📖 Jurnal</button></a>
+    <a href="/reset"><button class="danger">🔄 Qaytadan boshlash</button></a>
+  </div>
+</body>
+</html>

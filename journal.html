@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jurnal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h2>📖 Jurnal</h2>
+    <table>
+      <tr><th>Sana</th><th>Miqdor</th><th>Izoh</th></tr>
+      {% for item in journal %}
+      <tr><td>{{ item[0] }}</td><td>{{ item[1] }}</td><td>{{ item[2] }}</td></tr>
+      {% endfor %}
+    </table>
+    <a href="/home"><button>⬅️ Orqaga</button></a>
+  </div>
+</body>
+</html>

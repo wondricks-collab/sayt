@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Balans</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h2>Balans</h2>
+    <p>Joriy balans: <b>{{ balance }}</b></p>
+    {% if last %}
+      <p>Oxirgi chiqim: {{ last[0] }} — {{ last[1] }} ({{ last[2] }})</p>
+    {% endif %}
+    <a href="/home"><button>⬅️ Orqaga</button></a>
+  </div>
+</body>
+</html>
